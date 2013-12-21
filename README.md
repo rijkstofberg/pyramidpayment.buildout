@@ -1,7 +1,7 @@
 Python Payment Integrations
 ===========================
 
-The sample code in this project was tested in a python 2.6 virtualenv.
+The sample code in this project was tested in a python 2.7 virtualenv.
 
 PayU integration
 ----------------
@@ -84,7 +84,6 @@ Initialize buildout and start pserver
     $ ./bin/pip install setuptools --upgrade
     $ bin/python bootstrap.py -c development.cfg
     $ bin/buildout -Nvc development.cfg
-    $ cd src/rijkstofberg.payu
-    $ ../../bin/python setup.py install
     $ bin/initialize_rijkstofberg.payu_db ./etc/development.ini
+    $ bin/add_demo_data ./etc/development.ini
     $ bin/pserve etc/development.ini

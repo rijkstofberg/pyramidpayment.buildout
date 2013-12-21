@@ -21,9 +21,9 @@ import os
 
 env.path = os.getcwd()
 env.hosts = ['SERVER_IP']
-env.prod_user = 'pyramidpayment'  # production user for this project
+env.prod_user = 'pyramid.payment'  # production user for this project
 env.server = 'SERVER_IP'
-env.shortname = 'pyramidpayment'
+env.shortname = 'pyramid.payment'
 
 
 def deploy():

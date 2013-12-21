@@ -1,5 +1,5 @@
 [app:main]
-use = egg:homebrud
+use = egg:pyramid.payment
 
 pyramid.reload_templates = true
 pyramid.debug_templates = true
@@ -40,7 +40,7 @@ port = ${port}
 ###
 
 [loggers]
-keys = root, homebrud, sqlalchemy
+keys = root, pyramidpayment, sqlalchemy
 
 [handlers]
 keys = console
@@ -52,10 +52,10 @@ keys = generic
 level = INFO
 handlers = console
 
-[logger_homebrud]
+[logger_pyramidpayment]
 level = DEBUG
 handlers =
-qualname = homebrud
+qualname = pyramidpayment
 
 [logger_sqlalchemy]
 level = INFO

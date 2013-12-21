@@ -1,6 +1,6 @@
 #---------- App Configuration ----------
-[app:homebrud]
-use = egg:homebrud
+[app:pyramidpayment]
+use = egg:pyramid.payment
 
 pyramid.reload_templates = false
 pyramid.debug_templates = false
@@ -21,7 +21,7 @@ mail.port = 8025
 use = egg:WebError#error_catcher
 debug = false
 error_email = maintenance@niteoweb.com
-from_address = ${paster}@homebrud.com
+from_address = ${paster}@pyramidpayment.com
 smtp_server = localhost
 
 [filter:tm]
@@ -32,7 +32,7 @@ commit_veto = repoze.tm:default_commit_veto
 pipeline =
     weberror
     tm
-    homebrud
+    pyramidpayment
 
 #---------- Server Configuration ----------
 [server:main]
@@ -42,7 +42,7 @@ port = ${port}
 
 #---------- Logging Configuration ----------
 [loggers]
-keys = root, homebrud, sqlalchemy
+keys = root, pyramidpayment, sqlalchemy
 
 [handlers]
 keys = console
@@ -57,7 +57,7 @@ handlers = console
 [logger_homebrud]
 level = WARN
 handlers =
-qualname = homebrud
+qualname = pyramidpayment
 
 [logger_sqlalchemy]
 level = WARN
