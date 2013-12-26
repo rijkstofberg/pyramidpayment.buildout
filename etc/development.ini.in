@@ -21,6 +21,13 @@ sqlalchemy.url = ${buildout:sqlalchemy_url}
 mail.host = localhost
 mail.port = 8025
 
+# callback URLs for PayU
+payu_RPP_URL = https://staging.payu.co.za/rpp.do
+returnUrl = http://localhost:8080/payment-processed
+cancelUrl = http://localhost:8080/payment-cancelled
+username  = Staging Integration Store 1
+password  = 78cXrW1W
+safekey   = {45D5C765-16D2-45A4-8C41-8D6F84042F8C}
 
 ###
 # wsgi server configuration
